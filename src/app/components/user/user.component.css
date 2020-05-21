@@ -1,0 +1,93 @@
+.table {
+  border: 1px solid #cecece;
+  background-color: #EEEEEE;
+  width: 100%;
+  text-align: left;
+  border-collapse: collapse;
+}
+
+.table th {
+  padding: 5px;
+  background: #17a2b8;
+  font-size: 15px;
+  font-weight: bold;
+  color: #FFFFFF;
+}
+
+.table td {
+  border: 1px solid #cecece;
+  padding: 5px;
+}
+
+:host ::ng-deep .ui-table .ui-sortable-column .ui-sortable-column-icon {
+  color: #FFFFFF;
+  font-size: 15px;
+}
+
+:host ::ng-deep .ui-multiselect {
+  border: 0;
+  width: 100%;
+}
+
+:host ::ng-deep .ui-inputtext.search-input {
+  border: 0;
+}
+
+.select-col-label {
+  float: left;
+  margin: 5px 10px 0 0;
+}
+
+.multi-select-wrap {
+  float: left;
+}
+
+:host ::ng-deep .pi.pi-search {
+  color: #666;
+  margin: 5px 10px 0 0;
+}
+:host ::ng-deep label {
+  font-weight: bold;
+  font-size: 14px;
+  color: #666;
+}
+
+:host ::ng-deep .table {
+  border: 0;
+}
+
+:host ::ng-deep .ui-table .ui-table-caption {
+  padding-top: 20px;
+  padding-bottom: 20px;
+  border: 0;
+}
+
+:host ::ng-deep .ui-table .ui-paginator-bottom {
+  border: 0;
+  margin-top: 20px;
+  background: transparent;
+}
+
+:host ::ng-deep .ui-chkbox .ui-chkbox-box.ui-state-active {
+  background-color: #17a2b8;
+  border-color: #17a2b8;
+}
+
+:host ::ng-deep .ui-paginator .ui-paginator-pages .ui-paginator-page.ui-state-active {
+  background-color: #17a2b8;
+}
+:host ::ng-deep .ui-multiselect-panel .ui-multiselect-items .ui-multiselect-item.ui-state-highlight{
+  background: #FFFFFF;
+  color: #666666;
+}
+:host ::ng-deep .ui-multiselect .ui-multiselect-panel {
+  border: 0;
+  box-shadow: 1px 5px 10px #ccc;
+}
+:host ::ng-deep .ui-multiselect-panel .ui-multiselect-header .ui-multiselect-filter-container .ui-multiselect-filter-icon {
+  color: #17a2b8;
+}
+
+:host ::ng-deep .ui-paginator .ui-paginator-pages .ui-paginator-page {
+  margin: 0px 1px;
+}

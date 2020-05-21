@@ -1,0 +1,44 @@
+<h4>User Entry Form</h4>
+<div class="container text-left">
+    <br/>
+      <form name="form" (ngSubmit)="addUser(addForm.value)" #addForm="ngForm">
+        <div class="row">
+          <div class="form-group">
+            <label  class="text-info">ID:</label>
+            <input type="text" name="Id" [(ngModel)]="userNew.Id" 
+              #Id="ngModel" required class="form-control">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label  class="text-info">First Name</label>
+            <input type="text" name="FirstName" [(ngModel)]="userNew.FirstName" 
+              #FirstName="ngModel" required class="form-control">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label  class="text-info">Last Name</label>
+            <input type="text" name="LastName" [(ngModel)]="userNew.LastName" 
+              #LastName="ngModel" required class="form-control">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label  class="text-info">Email</label>
+            <input type="text" name="Email" [(ngModel)]="userNew.Email" 
+              #Email="ngModel" required class="form-control">
+          </div>
+        </div>
+        <div class="row">
+          <div class="form-group">
+            <label  class="text-info">Mobile Number</label>
+            <input type="text" name="MobileNumber" [(ngModel)]="userNew.MobileNumber" 
+              #MobileNumber="ngModel" required class="form-control">
+          </div>
+        </div>
+        <button [disabled]="!addForm.valid" type="submit" 
+          class="btn btn-info btn-md">Submit</button>
+      </form>
+    <br/>
+  </div>  

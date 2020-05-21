@@ -1,0 +1,42 @@
+<h4>{{ pageTitle }}</h4>
+<div class="card">
+    <div class="card-body">
+          <p-table  #dt class="table"  [columns]="selectedColumns" [value]="cars" [sortOrder]="-1" [paginator]="true" sortMode="multiple" [rows]="10">
+            <ng-template pTemplate="caption">
+              <div class="row">
+                <div class="col-md-4">
+                    <label class="select-col-label">Select Columns</label>
+                    <div class="multi-select-wrap">
+                      <p-multiSelect [options]="cols" [(ngModel)]="selectedColumns" optionLabel="header" selectedItemsLabel="{0} columns selected"
+                      defaultLabel="Choose Columns" [style]="{minWidth: '200px'}"></p-multiSelect>
+                    </div>
+                </div>
+                <div class="col-md-6">
+                    <div class="search-wrap">
+                      <i class="pi pi-search"></i>
+                      <input type="text" pInputText size="50" class="search-input" placeholder="Global Filter" (input)="dt.filterGlobal($event.target.value, 'contains')">
+                    </div>
+                </div>
+                <div class="col-md-2">
+                  <button (click)="exportToExcel()" class="btn btn-secondary btn-sm float-right">Export To Excel</button> 
+                </div>
+              </div>
+            </ng-template>
+            <ng-template pTemplate="header" let-columns>
+                <tr>
+                    <th *ngFor="let col of columns" [pSortableColumn]="col.field">
+                        {{col.header}}
+                        <p-sortIcon [field]="col.field"></p-sortIcon>
+                    </th>
+                </tr>
+            </ng-template>
+            <ng-template pTemplate="body" let-rowData let-columns="columns">
+                <tr>
+                    <td *ngFor="let col of columns">
+                        {{rowData[col.field]}}
+                    </td>
+                </tr>
+            </ng-template>
+        </p-table>
+      </div>
+</div>

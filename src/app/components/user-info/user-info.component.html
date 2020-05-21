@@ -1,0 +1,30 @@
+<h2>User Profile</h2>
+<p-table #dt [columns]="cols" [value]="users" selectionMode="multiple" >
+    <ng-template pTemplate="header" let-columns>
+        <tr>
+            <th *ngFor="let col of columns">
+                {{col.header}}
+            </th>
+        </tr>
+    </ng-template>
+    <ng-template pTemplate="body" let-rowData let-columns="columns">
+        <tr [pSelectableRow]="rowData">
+            <td *ngFor="let col of columns">
+                {{rowData[col.field]}}
+            </td>
+        </tr>
+    </ng-template>
+</p-table>
+<p-table  [value]="users" selectionMode="multiple" >
+    <ng-template pTemplate="caption">
+        <div class="row">
+        <div class="button col-sm-5">
+            <button type="button" (click)="exportExcel()"
+            style="margin-right: 0.5em;" class="btn btn-outline-secondary">Export to Excel</button>
+        </div>
+        <div class="button col-sm-6">
+        <a class="btn btn-outline-secondary" routerLink="/new-user">Add user</a>
+        </div>
+    </div>
+    </ng-template>
+</p-table>
